@@ -1,0 +1,16 @@
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
