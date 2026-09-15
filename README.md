@@ -41,4 +41,3 @@ Then open `http://localhost:8000` in your browser.
 
 Add a new `.html` file inside `pages/`, copying the `<head>` link structure
 from `pages/about.html` (paths use `../` since pages live one level deep).
->>>>>>>>> Temporary merge branch 2
