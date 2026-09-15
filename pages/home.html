@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Home</title>
+  <style>
     :root {
       --bg: #ffffff;
       --text: #1a1a1a;
@@ -126,42 +134,37 @@
             transform: translateY(0);
         }
     }
+  </style>
+</head>
+<body>
 
-    .nav {
-      max-width: var(--max-width);
-      background: var(--sunset-paradise);
-      margin: 0 auto;
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-      position: relative;
-      z-index: 10;
-    }
+  <header>
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="../assets/icons/Logo.png" alt="Paradise Planner Logo" width="60" height="60">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+  </header>
 
-    .logo {
-      font-weight: 600;
-      font-size: 1.1rem;
-      text-decoration: none;
-      color: var(--text);
-    }
+  <main>
+    <section class="hero">
+        <h1>Welcome to Paradise Planner</h1>
+        <p>Plan your projects with ease and efficiency.</p>
 
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+        <div class="button-grid">
+            <a href="sprint1.html" class="btn">Sprint 1</a>
+            <a href="#" class="btn">Sprint 2</a>
+            <a href="#" class="btn">Sprint 3</a>
+            <a href="#" class="btn">Sprint 4</a>
+            <a href="#" class="btn">Sprint 5</a>
+            <a href="#" class="btn">Sprint 6</a>
+        </div>
+    </section>
+  </main>
 
-    .nav-links a {
-      color: var(--bg);
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      color: var(--text);
-    }
+</body>
+</html>
