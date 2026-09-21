@@ -335,7 +335,7 @@
 
 .qa-row {
   display: grid;
-  grid-template-columns: 2.4fr 5fr 1fr;
+  grid-template-columns: 2.4fr 6fr;
   gap: 1.25rem;
   align-items: center;
   padding: 0.9rem 0;
@@ -358,13 +358,6 @@
   line-height: 1.5;
 }
 
-.qa-owner {
-  justify-self: end;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-
 @media (max-width: 700px) {
   .charter-notes,
   .charter-banner {
@@ -376,11 +369,124 @@
     gap: 0.35rem;
   }
 
-  .qa-owner {
-    justify-self: start;
-  }
-
   .ticket-body {
     padding: 1.5rem 1.25rem;
   }
+}
+
+/* ---------- Sprint 1 hub page ---------- */
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.hub-card {
+  display: block;
+  background: var(--ticket-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border-top: 5px solid transparent;
+  padding: 1.75rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hub-card.sunset { border-top-color: #ff6a88; }
+.hub-card.ocean  { border-top-color: #0072ff; }
+.hub-card.golden { border-top-color: #fda085; }
+
+.hub-card:hover,
+.hub-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hub-card h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin: 0 0 0.6rem;
+}
+
+.hub-card p {
+  margin: 0 0 1rem;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.hub-card .hub-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .hub-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Subpage shell (charter / blank subpages) ---------- */
+
+.back-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--ink);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.1rem;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.subpage-placeholder {
+  margin-top: 2rem;
+}
+
+.subpage-block {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.subpage-block:first-child {
+  border-top: none;
+}
+
+.subpage-block h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin: 0 0 0.6rem;
+}
+
+.subpage-block p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.placeholder-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  border: 1.5px dashed var(--border);
+  border-radius: 3px;
+  padding: 0.15rem 0.5rem;
+  margin-top: 0.6rem;
 }
