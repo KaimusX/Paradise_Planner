@@ -697,3 +697,82 @@ blockquote.quote-block cite {
     gap: 0.3rem;
   }
 }
+
+/* ---------- About page: team grid ---------- */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.team-card {
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  background: var(--ticket-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.team-card-stripe {
+  background: var(--sunset-paradise);
+}
+
+.team-card.ocean .team-card-stripe   { background: var(--tropical-ocean); }
+.team-card.golden .team-card-stripe  { background: var(--golden-hour); }
+.team-card.lagoon .team-card-stripe  { background: var(--lagoon-blue); }
+
+.team-card-body {
+  padding: 1.75rem 1.85rem;
+}
+
+.team-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sunset-paradise);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.team-card.ocean .team-avatar  { background: var(--tropical-ocean); }
+.team-card.golden .team-avatar { background: var(--golden-hour); color: #3a2a1a; }
+.team-card.lagoon .team-avatar { background: var(--lagoon-blue); color: #103347; }
+
+.team-card h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin: 0 0 0.15rem;
+}
+
+.team-role {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.85rem;
+}
+
+.team-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}

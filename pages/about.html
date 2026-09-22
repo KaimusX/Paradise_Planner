@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - My Project</title>
-
-  <link rel="stylesheet" href="../css/reset.css" />
-  <link rel="stylesheet" href="../css/variables.css" />
-  <link rel="stylesheet" href="../css/main.css" />
-  <link rel="stylesheet" href="../css/components/header.css" />
-  <link rel="stylesheet" href="../css/components/footer.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>About — Paradise Planner</title>
 </head>
-<body>
+<body class="page-sprint">
 
-  <header class="site-header">
-    <h1><a href="../index.html">My Project</a></h1>
+  <header>
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="../assets/icons/Logo.png" alt="Paradise Planner Logo" width="60" height="60">
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+    </nav>
   </header>
 
-  <main id="app">
-    <h2>About</h2>
-    <p>This is the about page. Replace this with real content.</p>
-  </main>
+  <main>
+    <section class="sprint-content charter">
 
-  <footer class="site-footer">
-    <p>&copy; 2026 My Project</p>
-  </footer>
+        <div class="charter-intro">
+            <p class="charter-eyebrow">Team 11</p>
+            <h1>About us</h1>
+            <p>We're the team behind Paradise Planner, building a simpler way to plan a trip from idea to itinerary. Here's who does what.</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-card-stripe"></div>
+                <div class="team-card-body">
+                    <div class="team-avatar">L</div>
+                    <h2>Luis</h2>
+                    <p class="team-role">Project Manager</p>
+                    <p>The bridge between external stakeholders and developers, keeping the project on track and aligned. Owns go/no-go on everything that ships to the public-facing site.</p>
+                </div>
+            </div>
+
+            <div class="team-card ocean">
+                <div class="team-card-stripe"></div>
+                <div class="team-card-body">
+                    <div class="team-avatar">J</div>
+                    <h2>Joy</h2>
+                    <p class="team-role">Business Strategist</p>
+                    <p>Tends to our business partners, keeping those relationships strong and healthy, while staying open to building new ones. Owns business decisions like calling scope too complex.</p>
+                </div>
+            </div>
+
+            <div class="team-card golden">
+                <div class="team-card-stripe"></div>
+                <div class="team-card-body">
+                    <div class="team-avatar">M</div>
+                    <h2>Marc Buster</h2>
+                    <p class="team-role">Development Lead</p>
+                    <p>Guides the team and makes sure the project ships on time, at the highest level. Owns major development decisions and the site.</p>
+                </div>
+            </div>
+
+            <div class="team-card lagoon">
+                <div class="team-card-stripe"></div>
+                <div class="team-card-body">
+                    <div class="team-avatar">O</div>
+                    <h2>Omar Paz</h2>
+                    <p class="team-role">Document Lead</p>
+                    <p>Makes sure all Paradise Planner documentation clearly reflects the team's current decisions, requirements, research, scope, and progress. Owns internal documents.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+  </main>
 
 </body>
 </html>
