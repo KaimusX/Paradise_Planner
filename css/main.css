@@ -536,3 +536,164 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* ---------- Market research: digestible components ---------- */
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.insight-card {
+  background: var(--ticket-bg);
+  border-radius: 4px;
+  padding: 1.25rem 1.4rem;
+  border-left: 3px solid var(--accent);
+}
+
+.insight-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.98rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.insight-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+blockquote.quote-block {
+  margin: 0;
+  padding: 1.1rem 1.4rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 3px solid #ff6a88;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+blockquote.quote-block.ocean {
+  border-left-color: #0072ff;
+}
+
+blockquote.quote-block cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.quote-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.quote-banner blockquote.quote-block {
+  background: var(--ticket-bg);
+  border-left-color: #fda085;
+}
+
+.step-list {
+  counter-reset: step;
+  margin: 1.25rem 0 1.75rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.step-list li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.step-list li::before {
+  content: counter(step);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: var(--tropical-ocean);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-list strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.98rem;
+  margin-bottom: 0.15rem;
+}
+
+.step-list span {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.pivot-list {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pivot-list li {
+  padding: 0.9rem 1.1rem;
+  background: var(--ticket-bg);
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.pivot-list strong {
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+
+.pivot-list span {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .insight-grid,
+  .quote-grid,
+  .quote-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .pivot-list li {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+}
