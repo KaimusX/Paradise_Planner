@@ -1,0 +1,254 @@
+/* Business Strategy only; shared branding and document shell live in main.css. */
+.page-strategy .strategy-section {
+  margin-bottom: 2.75rem;
+}
+
+.strategy-section > h2 {
+  margin: 0 0 1rem;
+  color: var(--ink);
+  font: 600 1.6rem/1.25 'Fraunces', Georgia, serif;
+}
+
+.strategy-lead {
+  margin: 0 0 1.25rem;
+  max-width: 68ch;
+}
+
+.strategy-chain,
+.strategy-values,
+.strategy-priorities {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.strategy-chain {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.strategy-card {
+  min-width: 0;
+  background: var(--ticket-bg);
+  border-radius: 4px;
+  padding: 1.25rem;
+}
+
+.strategy-card h3 {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.35;
+  margin: 0 0 0.65rem;
+}
+
+.strategy-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.strategy-chain .strategy-card {
+  position: relative;
+  padding: 1.1rem 0.85rem;
+  border-top: 4px solid #0072ff;
+}
+
+.strategy-chain .strategy-card:last-child {
+  border-top-color: #ff6a88;
+}
+
+.strategy-chain p {
+  font-size: 0.9rem;
+}
+
+/* Decorative connectors; the ordered list conveys sequence to assistive tools. */
+.strategy-chain .strategy-card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  right: -1rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid var(--ink);
+  border-right: 2px solid var(--ink);
+  transform: rotate(45deg);
+}
+
+.strategy-values {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ticket-body .strategy-goal {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--golden-hour);
+  border-radius: 4px;
+  color: #3a2a1a;
+}
+
+.ticket-body .strategy-note {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #c8d9df;
+  font-size: 0.9rem;
+}
+
+.strategy-priorities {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  counter-reset: priority;
+}
+
+.strategy-priorities .strategy-card {
+  counter-increment: priority;
+}
+
+.strategy-priorities h3::before {
+  content: counter(priority, decimal-leading-zero) ' / ';
+  color: #375b6d;
+}
+
+.strategy-measures {
+  margin: 0;
+  background: var(--ticket-bg);
+  border-radius: 4px;
+  padding: 0 1.5rem;
+}
+
+.strategy-measures > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 1.5rem;
+  padding: 1.1rem 0;
+}
+
+.strategy-measures > div + div {
+  border-top: 1px solid #c8d9df;
+}
+
+.strategy-measures dt {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.strategy-measures dd {
+  margin: 0;
+}
+
+.strategy-scope {
+  margin: 0;
+}
+
+.strategy-scope ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #3a2a1a;
+}
+
+.strategy-scope li + li {
+  margin-top: 0.3rem;
+}
+
+.strategy-assumptions p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.strategy-closing {
+  color: var(--ink);
+  font-weight: 600;
+  margin: 0;
+  max-width: 68ch;
+}
+
+/* Keep the existing gradients while improving the link text contrast. */
+.page-strategy .nav-links a,
+.page-strategy .download-btn {
+  color: #102b3b;
+}
+
+.page-strategy .nav-links a:hover,
+.page-strategy .nav-links a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+@media (max-width: 800px) {
+  .strategy-chain {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .strategy-chain .strategy-card:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -1rem;
+    left: calc(50% - 0.25rem);
+    transform: rotate(135deg);
+  }
+
+  .strategy-values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .strategy-values,
+  .strategy-priorities,
+  .strategy-measures > div {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-measures > div {
+    gap: 0.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-strategy .charter { animation: none; }
+  .page-strategy .download-btn { transition: none; }
+}
+
+@media print {
+  @page { size: A4; margin: 16mm; }
+
+  .page-strategy header,
+  .page-strategy .doc-toolbar { display: none; }
+
+  .page-strategy main {
+    display: block;
+    padding: 0;
+    min-height: 0;
+    background: white;
+  }
+
+  .page-strategy .charter { max-width: none; animation: none; }
+  .page-strategy { font-size: 10pt; }
+  .page-strategy .charter-intro { margin-bottom: 1.5rem; }
+  .page-strategy .strategy-section { margin-bottom: 1.5rem; }
+  .strategy-chain { grid-template-columns: 1fr; gap: 0.75rem; }
+  .strategy-chain .strategy-card { padding: 0.65rem 1rem; border-top: 0; border-left: 3px solid #375b6d; }
+  .strategy-chain .strategy-card::after { display: none; }
+  .strategy-values,
+  .strategy-priorities,
+  .strategy-scope,
+  .strategy-assumptions { grid-template-columns: 1fr 1fr; }
+  .strategy-card,
+  .ticket,
+  .strategy-measures > div,
+  .strategy-scope,
+  .strategy-assumptions { break-inside: avoid; }
+  .strategy-section > h2,
+  .strategy-lead { break-after: avoid; }
+  .strategy-card,
+  .strategy-measures,
+  .ticket,
+  .strategy-scope { background: white; border: 1px solid #c8d9df; }
+  .ticket-body .strategy-goal { background: white; border-left: 3px solid #375b6d; }
+  .strategy-card p,
+  .strategy-chain p,
+  .ticket-body p,
+  .strategy-assumptions p { font-size: 10pt; }
+}
