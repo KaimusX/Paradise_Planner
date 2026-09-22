@@ -776,3 +776,17 @@ blockquote.quote-block cite {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Site disclaimer footer ---------- */
+
+.site-disclaimer {
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.site-disclaimer p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
