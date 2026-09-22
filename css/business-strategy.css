@@ -1,254 +1,142 @@
-/* Business Strategy only; shared branding and document shell live in main.css. */
-.page-strategy .strategy-section {
-  margin-bottom: 2.75rem;
-}
+/* Business Strategy: shared branding and document actions remain in main.css. */
+.page-strategy .charter { animation: none; }
+.page-strategy .charter-intro h1 { max-width: none; }
+.page-strategy .charter-intro .strategy-support { margin-top: 1rem; font-size: 1rem; }
 
-.strategy-section > h2 {
-  margin: 0 0 1rem;
-  color: var(--ink);
-  font: 600 1.6rem/1.25 'Fraunces', Georgia, serif;
-}
-
-.strategy-lead {
+.strategy-page { color: var(--text); }
+.strategy-section { margin: 0 0 3rem; }
+.strategy-section > h2,
+.strategy-conclusion > h2 {
   margin: 0 0 1.25rem;
-  max-width: 68ch;
+  font: 600 1.75rem/1.25 'Fraunces', Georgia, serif;
+  color: var(--ink);
 }
-
-.strategy-chain,
-.strategy-values,
-.strategy-priorities {
-  display: grid;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.section-number {
+  display: inline-block;
+  font: 600 0.85rem/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+  padding: 0.15rem 0.4rem;
+  border-bottom: 2px solid #375b6d;
 }
-
-.strategy-chain {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1.25rem;
-}
-
-.strategy-card {
-  min-width: 0;
+.strategy-page h3,
+.strategy-page h4 { color: var(--ink); font-size: 1rem; line-height: 1.4; margin: 0 0 0.7rem; }
+.strategy-page p { line-height: 1.65; }
+.strategy-section p { margin: 0 0 1rem; }
+.strategy-section p:last-child { margin-bottom: 0; }
+.strategy-split { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+.strategy-copy { padding-top: 0.2rem; }
+.model-card,
+.scope-grid > li,
+.risk-card {
+  padding: 1.5rem;
+  border: 1px solid rgb(16 51 71 / 12%);
+  border-radius: 8px;
   background: var(--ticket-bg);
-  border-radius: 4px;
-  padding: 1.25rem;
+  box-shadow: 0 3px 10px rgb(16 51 71 / 4%);
 }
-
-.strategy-card h3 {
-  color: var(--ink);
-  font-size: 1rem;
-  line-height: 1.35;
-  margin: 0 0 0.65rem;
-}
-
-.strategy-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.strategy-chain .strategy-card {
-  position: relative;
-  padding: 1.1rem 0.85rem;
-  border-top: 4px solid #0072ff;
-}
-
-.strategy-chain .strategy-card:last-child {
-  border-top-color: #ff6a88;
-}
-
-.strategy-chain p {
-  font-size: 0.9rem;
-}
-
-/* Decorative connectors; the ordered list conveys sequence to assistive tools. */
-.strategy-chain .strategy-card:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: 1.5rem;
-  right: -1rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-top: 2px solid var(--ink);
-  border-right: 2px solid var(--ink);
-  transform: rotate(45deg);
-}
-
-.strategy-values {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.ticket-body .strategy-goal {
-  margin-top: 1.25rem;
-  padding: 1rem 1.25rem;
-  background: var(--golden-hour);
-  border-radius: 4px;
-  color: #3a2a1a;
-}
-
-.ticket-body .strategy-note {
-  margin-top: 1.25rem;
-  padding-top: 1rem;
-  border-top: 1px solid #c8d9df;
-  font-size: 0.9rem;
-}
-
-.strategy-priorities {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  counter-reset: priority;
-}
-
-.strategy-priorities .strategy-card {
-  counter-increment: priority;
-}
-
-.strategy-priorities h3::before {
-  content: counter(priority, decimal-leading-zero) ' / ';
-  color: #375b6d;
-}
-
-.strategy-measures {
-  margin: 0;
-  background: var(--ticket-bg);
-  border-radius: 4px;
-  padding: 0 1.5rem;
-}
-
-.strategy-measures > div {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: 1.5rem;
-  padding: 1.1rem 0;
-}
-
-.strategy-measures > div + div {
-  border-top: 1px solid #c8d9df;
-}
-
-.strategy-measures dt {
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.strategy-measures dd {
-  margin: 0;
-}
-
-.strategy-scope {
-  margin: 0;
-}
-
-.strategy-scope ul {
-  margin: 0;
-  padding-left: 1.1rem;
-  color: #3a2a1a;
-}
-
-.strategy-scope li + li {
-  margin-top: 0.3rem;
-}
-
-.strategy-assumptions p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.strategy-closing {
-  color: var(--ink);
-  font-weight: 600;
-  margin: 0;
-  max-width: 68ch;
-}
-
-/* Keep the existing gradients while improving the link text contrast. */
+.model-card { border-top: 4px solid #845ec2; }
+.model-card h3 { font: 600 1.3rem/1.3 'Fraunces', Georgia, serif; }
+.model-card dl { margin: 0; }
+.model-card dl > div { padding: 0.75rem 0; border-bottom: 1px solid #d6e3e8; }
+.model-card dl > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.model-card dt { font-size: 0.85rem; color: #375b6d; margin-bottom: 0.2rem; }
+.model-card dd { margin: 0; font-weight: 600; color: var(--ink); }
+.model-price dd { font: 600 2.75rem/1.15 'Fraunces', Georgia, serif; }
+.question-grid,
+.scope-grid,
+.planning-tools,
+.priority-grid { list-style: none; padding: 0; }
+.question-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; margin: 1.5rem 0; }
+.question-grid li { padding: 1.1rem; border-radius: 6px; background: var(--ticket-bg); border-top: 3px solid #0072ff; font-weight: 600; color: var(--ink); }
+.question-grid li:last-child { grid-column: span 2; }
+.strategy-callout { padding: 1.5rem 1.75rem; border-radius: 6px; }
+.success-callout { background: var(--golden-hour); }
+.planning-flow { display: grid; grid-template-columns: minmax(0, 1.35fr) auto minmax(0, 1fr); gap: 1rem; align-items: center; margin-bottom: 1.5rem; }
+.planning-problem,
+.planning-solution { padding: 1.5rem; border-radius: 8px; }
+.planning-problem { background: rgb(246 251 252 / 65%); border: 1px dashed #55717f; }
+.planning-tools { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 0; }
+.planning-tools li { background: var(--ticket-bg); border: 1px solid #c8d9df; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.95rem; }
+.planning-solution { background: var(--ticket-bg); border-left: 4px solid #0072ff; }
+.flow-arrow { font-size: 1.8rem; color: var(--ink); }
+.justification-copy { border-left: 2px solid rgb(16 51 71 / 25%); padding-left: 1.25rem; }
+.scope-label { margin-top: 1.5rem !important; }
+.scope-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
+.scope-grid h4 { margin-bottom: 0.4rem; }
+.boundary-callout { background: rgb(246 251 252 / 65%); border: 1px solid #55717f; border-left: 4px solid #845ec2; }
+.risk-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.risk-card { border-top: 4px solid #ff6a88; padding: 1.25rem; }
+.risk-card p { font-size: 0.95rem; }
+.risk-card .risk-label { font-size: 0.8rem; font-weight: 600; color: #62506c; margin-bottom: 0.65rem; }
+.strategy-conclusion { padding: 2rem; background: var(--golden-hour); border-radius: 8px; }
+.strategy-conclusion p { margin: 0 0 1.25rem; }
+.priority-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.85rem 1.25rem; margin: 0; }
+.priority-grid li { border-top: 1px solid rgb(16 51 71 / 30%); padding-top: 0.7rem; color: var(--ink); font-weight: 600; }
 .page-strategy .nav-links a,
-.page-strategy .download-btn {
-  color: #102b3b;
-}
-
+.page-strategy .download-btn { color: #102b3b; }
 .page-strategy .nav-links a:hover,
-.page-strategy .nav-links a:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
-}
+.page-strategy .nav-links a:focus-visible { text-decoration: underline; text-underline-offset: 0.25em; }
 
 @media (max-width: 800px) {
-  .strategy-chain {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .strategy-chain .strategy-card:not(:last-child)::after {
-    top: auto;
-    right: auto;
-    bottom: -1rem;
-    left: calc(50% - 0.25rem);
-    transform: rotate(135deg);
-  }
-
-  .strategy-values {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .risk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .risk-card:first-child { grid-column: 1 / -1; }
+  .strategy-split { gap: 1.25rem; }
 }
-
 @media (max-width: 600px) {
-  .strategy-values,
-  .strategy-priorities,
-  .strategy-measures > div {
-    grid-template-columns: 1fr;
-  }
-
-  .strategy-measures > div {
-    gap: 0.4rem;
-  }
+  .strategy-split,
+  .question-grid,
+  .planning-flow,
+  .scope-grid,
+  .risk-grid,
+  .priority-grid { grid-template-columns: 1fr; }
+  .question-grid li:last-child,
+  .risk-card:first-child { grid-column: auto; }
+  .planning-tools { flex-direction: column; }
+  .flow-arrow { justify-self: center; transform: rotate(90deg); line-height: 1; }
+  .strategy-conclusion,
+  .strategy-callout { padding: 1.5rem; }
 }
-
 @media (prefers-reduced-motion: reduce) {
-  .page-strategy .charter { animation: none; }
   .page-strategy .download-btn { transition: none; }
 }
-
 @media print {
-  @page { size: A4; margin: 16mm; }
-
+  @page { size: letter; margin: 0.65in; }
   .page-strategy header,
   .page-strategy .doc-toolbar { display: none; }
-
-  .page-strategy main {
-    display: block;
-    padding: 0;
-    min-height: 0;
-    background: white;
-  }
-
-  .page-strategy .charter { max-width: none; animation: none; }
-  .page-strategy { font-size: 10pt; }
+  .page-strategy main { display: block; padding: 0; min-height: 0; background: white; }
+  .page-strategy .charter { max-width: none; }
+  .strategy-page { font-size: 10pt; }
   .page-strategy .charter-intro { margin-bottom: 1.5rem; }
-  .page-strategy .strategy-section { margin-bottom: 1.5rem; }
-  .strategy-chain { grid-template-columns: 1fr; gap: 0.75rem; }
-  .strategy-chain .strategy-card { padding: 0.65rem 1rem; border-top: 0; border-left: 3px solid #375b6d; }
-  .strategy-chain .strategy-card::after { display: none; }
-  .strategy-values,
-  .strategy-priorities,
-  .strategy-scope,
-  .strategy-assumptions { grid-template-columns: 1fr 1fr; }
-  .strategy-card,
-  .ticket,
-  .strategy-measures > div,
-  .strategy-scope,
-  .strategy-assumptions { break-inside: avoid; }
+  .page-strategy .charter-intro h1 { font-size: 26pt; }
+  .page-strategy .charter-intro p,
+  .page-strategy .charter-intro .strategy-support { font-size: 10pt; }
+  .strategy-section { margin-bottom: 1.5rem; }
   .strategy-section > h2,
-  .strategy-lead { break-after: avoid; }
-  .strategy-card,
-  .strategy-measures,
-  .ticket,
-  .strategy-scope { background: white; border: 1px solid #c8d9df; }
-  .ticket-body .strategy-goal { background: white; border-left: 3px solid #375b6d; }
-  .strategy-card p,
-  .strategy-chain p,
-  .ticket-body p,
-  .strategy-assumptions p { font-size: 10pt; }
+  .strategy-conclusion > h2 { font-size: 17pt; break-after: avoid; }
+  .strategy-split { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 1rem; }
+  .question-grid,
+  .priority-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .scope-grid,
+  .risk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .planning-flow { grid-template-columns: minmax(0, 1.35fr) auto minmax(0, 1fr); }
+  .planning-tools { flex-direction: row; }
+  .flow-arrow { transform: none; }
+  .model-card,
+  .scope-grid > li,
+  .risk-card,
+  .strategy-callout,
+  .strategy-conclusion,
+  .planning-flow,
+  .question-grid { break-inside: avoid; }
+  .model-card,
+  .scope-grid > li,
+  .risk-card,
+  .strategy-callout,
+  .strategy-conclusion,
+  .planning-problem,
+  .planning-solution { background: white; box-shadow: none; border: 1px solid #b1c2ca; padding: 1rem; }
+  .strategy-page p { orphans: 3; widows: 3; }
+  .risk-card p { font-size: 10pt; }
+  .scope-label { break-after: avoid; }
 }
