@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROI Analysis — Sprint 2</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/sprint2.css">
+  <link rel="icon" type="image/png" href="../../assets/icons/Logo.png">
+</head>
+<body class="page-sprint page-sprint2">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+<nav class="nav" aria-label="Main navigation">
+    <div class="nav-logo">
+<img src="../../assets/icons/Logo.png" alt="Paradise Planner Logo" width="60" height="60">
+</div>
+    <ul class="nav-links">
+<li>
+<a href="../../index.html">Home</a>
+</li>
+<li>
+<a href="../about.html">About</a>
+</li>
+</ul>
+  </nav>
+</header>
+  <main id="main-content">
+<div class="sprint-content charter">
+    <div class="doc-toolbar">
+<a class="back-link" href="index.html">← Back to Sprint 2</a>
+<a class="download-btn" href="../../assets/pdfs/sprint2-roi-analysis.pdf" download>
+<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4">
+</path>
+<polyline points="7 10 12 15 17 10">
+</polyline>
+<line x1="12" y1="15" x2="12" y2="3">
+</line>
+</svg>Download PDF</a>
+</div>
+    <article aria-labelledby="page-title">
+      <div class="charter-intro">
+<p class="charter-eyebrow">Sprint 2 — Team 11</p>
+<h1 id="page-title">ROI Analysis</h1>
+<p>Revenue scenarios and cost assumptions for evaluating the project’s return.</p>
+</div>
+      <section class="document-section" aria-labelledby="section-1">
+<h2 id="section-1">
+<span class="section-number">01</span> Known Costs</h2>
+<dl class="metric-grid">
+<div>
+<dt>Known initial budget</dt>
+<dd>$136,197.26</dd>
+</div>
+</dl>
+</section>
+<section class="document-section" aria-labelledby="section-2">
+<h2 id="section-2">
+<span class="section-number">02</span> Planning Assumptions</h2>
+<p>The app price is <strong>$1.99</strong>. Download volumes, affiliate conversion rates, and average affiliate revenue below are planning assumptions, not historical measurements.</p>
+<div class="table-scroll" role="region" aria-label="Planning scenarios" tabindex="0">
+<table>
+<caption>Planning scenarios</caption>
+<thead>
+<tr>
+<th scope="col">Scenario</th>
+<th scope="col">Paid downloads</th>
+<th scope="col">Affiliate conversion</th>
+<th scope="col">Average affiliate revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Conservative</th>
+<td>50,000</td>
+<td>3%</td>
+<td>$8</td>
+</tr>
+<tr>
+<th scope="row">Expected</th>
+<td>100,000</td>
+<td>5%</td>
+<td>$12</td>
+</tr>
+<tr>
+<th scope="row">Upside</th>
+<td>200,000</td>
+<td>8%</td>
+<td>$15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="document-section" aria-labelledby="section-3">
+<h2 id="section-3">
+<span class="section-number">03</span> Calculation Logic</h2>
+<dl class="calculation-list">
+<div>
+<dt>App revenue</dt>
+<dd>paid downloads × $1.99</dd>
+</div>
+<div>
+<dt>Affiliate conversions</dt>
+<dd>paid downloads × affiliate conversion rate</dd>
+</div>
+<div>
+<dt>Affiliate revenue</dt>
+<dd>affiliate conversions × average affiliate revenue</dd>
+</div>
+<div>
+<dt>Total revenue</dt>
+<dd>app revenue + affiliate revenue</dd>
+</div>
+<div>
+<dt>Net benefit</dt>
+<dd>total revenue − applicable project costs</dd>
+</div>
+<div>
+<dt>ROI</dt>
+<dd>(net benefit / applicable project costs) × 100</dd>
+</div>
+</dl>
+</section>
+<section class="document-section" aria-labelledby="section-4">
+<h2 id="section-4">
+<span class="section-number">04</span> Scenario Results</h2>
+<dl class="metric-grid">
+<div>
+<dt>Expected-case first-year ROI</dt>
+<dd>≈ +12.2%</dd>
+</div>
+</dl>
+<p>This estimated scenario depends on the expected planning assumptions and applicable project costs.</p>
+</section>
+<section class="document-section" aria-labelledby="section-5">
+<h2 id="section-5">
+<span class="section-number">05</span> Break-even</h2>
+<div class="planning-result">
+<p>Under the expected planning assumptions</p>
+<strong>≈ 89,092 paid downloads</strong>
+</div>
+<p>This approximate break-even figure depends on the expected planning assumptions and applicable project costs.</p>
+</section>
+<section class="document-section" aria-labelledby="section-6">
+<h2 id="section-6">
+<span class="section-number">06</span> Sensitivity</h2>
+<ul>
+<li>
+<strong>Download volume:</strong> changes app revenue and the number of potential affiliate conversions.</li>
+<li>
+<strong>Affiliate conversion:</strong> changes how many paid downloads generate affiliate revenue.</li>
+<li>
+<strong>Average affiliate revenue:</strong> changes the revenue earned per conversion.</li>
+<li>
+<strong>Operating cost:</strong> changes applicable project costs and therefore net benefit and ROI.</li>
+</ul>
+<p>These relationships follow the calculation logic above; no additional sensitivity estimates or team recommendation have been added.</p>
+</section>
+    </article>
+    <nav class="document-nav" aria-label="Sprint 2 documents">
+<a href="business-case.html">Business Case</a>
+<a href="estimation-appendix.html">Estimation Appendix</a>
+<a href="roi-analysis.html" aria-current="page">ROI Analysis</a>
+<a href="change-log.html">Change Log</a>
+</nav>
+  </div>
+</main>
+  <footer class="site-disclaimer">
+<p>Claude (Anthropic) was used to help with some design and formatting aspects of this site.</p>
+</footer>
+</body>
+</html>

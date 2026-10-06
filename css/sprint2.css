@@ -1,0 +1,56 @@
+/* Sprint 2 extends the existing sprint shell and document download pattern. */
+.page-sprint2 .charter { animation: none; min-width: 0; }
+.page-sprint2 .charter-intro h1 { max-width: none; }
+.page-sprint2 .nav-links a,
+.page-sprint2 .download-btn { color: #102b3b; }
+.page-sprint2 .nav-links a:hover { text-decoration: underline; }
+.page-sprint2 .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.page-sprint2 .hub-card { border-radius: 8px; box-shadow: 0 3px 10px rgb(16 51 71 / 5%); }
+.page-sprint2 .hub-card.lagoon { border-top-color: #007a70; }
+.hub-description { max-width: 65ch; font-size: 1.08rem; }
+.document-section { background: var(--ticket-bg); border: 1px solid rgb(16 51 71 / 12%); border-radius: 8px; padding: 1.75rem; margin: 0 0 1.5rem; box-shadow: 0 3px 10px rgb(16 51 71 / 4%); }
+.document-section h2 { font: 600 1.6rem/1.3 'Fraunces', Georgia, serif; color: var(--ink); margin: 0 0 1.25rem; }
+.section-number { font: 600 0.85rem/1.5 system-ui, sans-serif; display: inline-block; vertical-align: middle; border-bottom: 2px solid #375b6d; margin-right: 0.5rem; padding: 0.15rem; }
+.document-section p { line-height: 1.65; }
+.document-section p:last-child { margin-bottom: 0; }
+.document-section a,
+.document-nav a { color: #1649a6; text-underline-offset: 0.2em; }
+.metric-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+.metric-grid > div { border-top: 2px solid #bad9e5; padding: 0.8rem 0; }
+.metric-grid dt { color: #375b6d; font-size: 0.95rem; }
+.metric-grid dd { color: var(--ink); font-size: 1.3rem; font-weight: 600; margin: 0.4rem 0 0; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 1.25rem 0; border: 1px solid #c5d9df; border-radius: 4px; }
+.table-scroll table { border-collapse: collapse; width: 100%; text-align: left; font-size: 0.95rem; }
+.table-scroll caption { text-align: left; padding: 0.9rem 1rem; font-weight: 600; color: var(--ink); }
+.table-scroll th,
+.table-scroll td { padding: 0.85rem 1rem; vertical-align: top; border-top: 1px solid #c5d9df; min-width: 8rem; }
+.table-scroll thead { background: #dceff3; color: var(--ink); }
+.table-scroll tbody tr:nth-child(even) { background: #edf5f7; }
+.table-scroll tbody th { font-weight: 600; }
+.planning-result { padding: 1.5rem; background: var(--golden-hour); border-radius: 6px; color: var(--ink); }
+.planning-result > strong { display: block; font: 600 clamp(1.6rem, 4vw, 2.3rem)/1.2 'Fraunces', Georgia, serif; }
+.planning-result p:first-child { margin-top: 0; }
+.formula { font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.calculation-list { margin: 0; }
+.calculation-list > div { padding: 0.8rem 0; border-bottom: 1px solid #c5d9df; }
+.calculation-list dt { font-weight: 600; color: var(--ink); }
+.calculation-list dd { margin: 0.25rem 0 0; }
+.document-section ul { padding-left: 1.25rem; }
+.document-section li + li { margin-top: 0.75rem; }
+.document-nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-top: 2rem; }
+.document-nav a[aria-current="page"] { font-weight: 700; color: var(--ink); }
+.skip-link { position: absolute; top: -6rem; left: 1rem; background: white; color: var(--ink); padding: 0.75rem; z-index: 20; }
+.skip-link:focus { top: 1rem; }
+.page-sprint2 :focus-visible { outline: 3px solid #163d7a; outline-offset: 4px; }
+@media (max-width: 600px) {
+  .page-sprint2 main { padding: 2rem 1rem 3rem; }
+  .page-sprint2 .hub-grid,
+  .metric-grid { grid-template-columns: 1fr; }
+  .document-section { padding: 1.25rem; }
+  .document-section h2 { font-size: 1.4rem; }
+  .document-nav { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-sprint2 .hub-card,
+  .page-sprint2 .download-btn { transition: none; transform: none; }
+}
