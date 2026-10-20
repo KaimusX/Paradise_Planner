@@ -7,3 +7,9 @@
 .s3-note { color: var(--ink); font-size: 0.9rem; margin: 0.5rem 0 1.5rem; max-width: 68ch; }
 .s3-h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.4rem; color: var(--ink); margin: 2.25rem 0 0.4rem; }
 .ticket-body p + p { margin-top: 0.5rem; }
+
+/* Sprint 3 update note on earlier pages */
+.s3-update { background: var(--ticket-bg); border-left: 3px solid var(--accent); border-radius: 4px; padding: 1.1rem 1.4rem; margin: 2.25rem 0 0; }
+.s3-update h3 { margin: 0 0 0.3rem; font-size: 0.98rem; color: var(--ink); }
+.s3-update p { margin: 0 0 0.5rem; font-size: 0.9rem; }
+.s3-update ul { margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; }
