@@ -1,0 +1,9 @@
+/* Sprint 3 additions: tables and small notes */
+.table-wrap { overflow-x: auto; margin: 1.25rem 0 1.75rem; }
+.data-table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.9rem; line-height: 1.5; }
+.data-table th, .data-table td { text-align: left; vertical-align: top; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--border); }
+.data-table th { background: var(--ticket-bg); color: var(--ink); font-weight: 600; }
+.data-table td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.s3-note { color: var(--ink); font-size: 0.9rem; margin: 0.5rem 0 1.5rem; max-width: 68ch; }
+.s3-h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.4rem; color: var(--ink); margin: 2.25rem 0 0.4rem; }
+.ticket-body p + p { margin-top: 0.5rem; }
