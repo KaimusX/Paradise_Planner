@@ -1,0 +1,10 @@
+/* Sprint 4: tables and small notes */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.table-wrap { overflow-x: auto; margin: 1.25rem 0 1.75rem; }
+.data-table { width: 100%; min-width: 640px; border-collapse: collapse; background: #fff; font-size: 0.9rem; line-height: 1.5; }
+.data-table th, .data-table td { text-align: left; vertical-align: top; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--border); }
+.data-table thead th { background: var(--ticket-bg); color: var(--ink); font-weight: 600; }
+.data-table tbody th { width: 9.5rem; background: transparent; color: var(--ink); font-weight: 600; }
+.s4-h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.4rem; color: var(--ink); margin: 2.25rem 0 0.4rem; }
+.s4-note { color: var(--text); font-size: 0.95rem; line-height: 1.6; margin: 0.5rem 0 1rem; max-width: 68ch; }
+.insight-card p + p { margin-top: 0.35rem; }

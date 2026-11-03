@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/sprint4.css">
+  <link rel="icon" type="image/png" href="../../assets/icons/Logo.png">
+  <title>SLI table — Sprint 4</title>
+</head>
+<body class="page-sprint">
+  <header>
+    <nav class="nav">
+      <div class="nav-logo"><img src="../../assets/icons/Logo.png" alt="Paradise Planner Logo" width="60" height="60"></div>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="sprint-content charter">
+      <div class="charter-intro">
+        <p class="charter-eyebrow">Sprint 4 — Team 11</p>
+        <h1>SLI table</h1>
+        <p>Dashboard entry prepared by Joy, SLI lead.</p>
+      </div>
+      <div class="doc-toolbar">
+        <a class="back-link" href="index.html">&larr; Back to Sprint 4</a>
+                <a class="download-btn" href="../../assets/pdfs/sprint4-sli-table.pdf" download>
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download PDF
+                </a>
+      </div>
+      <div class="ticket "><div class="ticket-stripe"></div><div class="ticket-body"><h2>The user hurt most by a failure</h2><p>The traveler who reaches the day view and cannot tell whether they are over budget. If cost is not visible, the core promise of the charter (planning a trip more efficiently than doing it manually) collapses, and the user is back to a spreadsheet.</p></div></div>
+      <h2 class="s4-h2">Two ways we measure it</h2>
+      <div class="table-wrap" role="region" aria-label="SLI 1 and SLI 2 compared" tabindex="0"><table class="data-table"><caption class="sr-only">SLI 1 and SLI 2 compared</caption><thead><tr><th scope="col"></th><th scope="col">SLI 1: total is shown and correct</th><th scope="col">SLI 2: users find the total</th></tr></thead><tbody><tr><th scope="row">Definition</th><td>Proportion of day-view loads where the running trip total is displayed and matches the sum of listed activity costs.</td><td>Proportion of test users who locate the running total without scrolling or asking for help.</td></tr><tr><th scope="row">Measurement</th><td>Automated check on each prototype build; result logged per load. Owner: Joy.</td><td>Moderated usability test, 5 classmates, one task per session. Owner: Joy, with one teammate observing.</td></tr><tr><th scope="row">SLO</th><td>100% of loads in the prototype sprint, checked on every build.</td><td>At least 4 of 5 users locate the running total without scrolling or asking for help, during the wireframe-to-prototype sprint.</td></tr><tr><th scope="row">Rule check</th><td>Ratio of good events to total events; measured from the user's side; has a time window per build; specific and unambiguous.</td><td>Same ratio form; user-centric; scoped to one sprint; states the population (5 users); testable as written.</td></tr><tr><th scope="row">Who would notice</th><td>The traveler who spots a wrong total and stops trusting the budget feature.</td><td>The traveler who gives up and opens a spreadsheet instead.</td></tr></tbody></table></div>
+      <h2 class="s4-h2">Rule check</h2>
+      <p class="s4-note">Both indicators follow the five rules: measured from the user's perspective, expressed as a ratio of good to total events, specific, bounded by a time window, and observable with tools the team actually has.</p>
+      <p class="s4-note">SLI 2 is the weaker of the two only because five test users is a small population. The SLO is phrased as “4 of 5” rather than a percentage that would imply more precision than the sample supports.</p>
+      <div class="ticket ocean"><div class="ticket-stripe"></div><div class="ticket-body"><h2>Dashboard note</h2><p>Because this table feeds the Sprint 4 dashboard, both rows carry a named owner and a real cadence: SLI 1 on every build, SLI 2 once per sprint during usability testing.</p></div></div>
+
+    </section>
+  </main>
+  <footer class="site-disclaimer">
+    <p>Claude (Anthropic) was used to help with some design and formatting aspects of this site.</p>
+  </footer>
+</body>
+</html>

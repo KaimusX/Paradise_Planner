@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/sprint4.css">
+  <link rel="icon" type="image/png" href="../../assets/icons/Logo.png">
+  <title>Error budget — Sprint 4</title>
+</head>
+<body class="page-sprint">
+  <header>
+    <nav class="nav">
+      <div class="nav-logo"><img src="../../assets/icons/Logo.png" alt="Paradise Planner Logo" width="60" height="60"></div>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="sprint-content charter">
+      <div class="charter-intro">
+        <p class="charter-eyebrow">Sprint 4 — Team 11</p>
+        <h1>Error budget</h1>
+        <p>Two targets, how much failure each one allows, and what we do when we go over.</p>
+      </div>
+      <div class="doc-toolbar">
+        <a class="back-link" href="index.html">&larr; Back to Sprint 4</a>
+                <a class="download-btn" href="../../assets/pdfs/sprint4-error-budget.pdf" download>
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download PDF
+                </a>
+      </div>
+      <div class="table-wrap" role="region" aria-label="Error budget for each objective" tabindex="0"><table class="data-table"><caption class="sr-only">Error budget for each objective</caption><thead><tr><th scope="col"></th><th scope="col">Trip cost accuracy</th><th scope="col">Backup service availability</th></tr></thead><tbody><tr><th scope="row">Indicator</th><td>Difference between the estimated trip cost and the actual trip cost.</td><td>Availability of backup functionality when a primary third-party travel service or API is unavailable.</td></tr><tr><th scope="row">Target</th><td>At least 90% of trip estimates are within ±10% of the actual trip cost.</td><td>Backup functionality is available at least 99% of the time during third-party service outages.</td></tr><tr><th scope="row">Window</th><td>Monthly, using completed trips with available actual-cost data.</td><td>Monthly.</td></tr><tr><th scope="row">Who measures</th><td>Application analytics and the development team, by comparing estimated and actual trip costs.</td><td>Automated API monitoring and routine system checks.</td></tr><tr><th scope="row">Error budget</th><td>Up to 10% of trip estimates may fall outside the ±10% range.</td><td>Up to 1% downtime per month. In a 30-day month, about 7.2 hours.</td></tr><tr><th scope="row">What spends the budget</th><td>A trip estimate that differs from the actual trip cost by more than 10%.</td><td>Any time backup functionality is unavailable while a primary third-party service or API is down.</td></tr><tr><th scope="row">Policy action</th><td>If more than 10% of estimates miss the target, pause changes to the estimation feature and review the cost-calculation formula and data sources.</td><td>If backup downtime exceeds the 1% budget, prioritize reliability work, review backup providers, and add or improve fallback options.</td></tr><tr><th scope="row">Owner</th><td>Lead Developer</td><td>Project Manager / Technical Lead</td></tr><tr><th scope="row">Who we tell, and when</th><td>Notify the project team when the budget is exceeded and include the corrective action in the next project update.</td><td>Notify the project team immediately. If the outage affects users or a project deadline, notify the instructor or stakeholder in the next required update.</td></tr></tbody></table></div>
+      <h2 class="s4-h2">How the budgets are calculated</h2>
+      <div class="insight-grid"><div class="insight-card"><h3>Trip cost accuracy</h3><p>SLO = 90%</p><p>Error budget = 100% − 90% = 10%</p><p>Up to 10% of trip estimates may fall outside the ±10% range before the budget is spent.</p></div><div class="insight-card"><h3>Backup service availability</h3><p>SLO = 99%</p><p>Error budget = 100% − 99% = 1%</p><p>30 days × 24 hours = 720 hours; 1% of 720 hours = 7.2 hours</p><p>Backup may be unavailable for up to about 7.2 hours per month before the budget is spent.</p></div></div>
+
+    </section>
+  </main>
+  <footer class="site-disclaimer">
+    <p>Claude (Anthropic) was used to help with some design and formatting aspects of this site.</p>
+  </footer>
+</body>
+</html>
