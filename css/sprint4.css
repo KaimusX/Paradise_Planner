@@ -8,3 +8,13 @@
 .s4-h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.4rem; color: var(--ink); margin: 2.25rem 0 0.4rem; }
 .s4-note { color: var(--text); font-size: 0.95rem; line-height: 1.6; margin: 0.5rem 0 1rem; max-width: 68ch; }
 .insight-card p + p { margin-top: 0.35rem; }
+
+/* Mockups */
+.mock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.25rem 0 1rem; }
+.mock-fig { margin: 0; background: var(--ticket-bg); border-radius: 4px; overflow: hidden; }
+.mock-fig a { display: block; background: #212121; }
+.mock-fig img { display: block; width: 100%; height: auto; }
+.mock-fig figcaption { padding: 0.9rem 1.1rem 1.1rem; }
+.mock-fig figcaption strong { display: block; color: var(--ink); font-size: 0.98rem; margin-bottom: 0.15rem; }
+.mock-fig figcaption span { font-size: 0.9rem; line-height: 1.5; }
+@media (max-width: 700px) { .mock-grid { grid-template-columns: 1fr; } }
